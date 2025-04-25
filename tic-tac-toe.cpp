@@ -109,7 +109,7 @@ int main(){
     cout << "Choose a position number to make your move: "; 
     cin >> position; 
     if (position > 9 || cin.fail()){
-        cout << "You entered an invalid input"; 
+        cout << "You entered an invalid input" << endl; 
         break; 
     }
     
@@ -125,11 +125,13 @@ int main(){
     //checks the state each time to determine if there's a winner
     if(determineWinner(board1.board) != ' '){
     //Read the board after to know winner (or if it's a draw)
-    cout << "The winner is " << determineWinner(board1.board); 
+    cout << "The winner is " << determineWinner(board1.board) << endl; 
     break; 
     } 
     else if (determineWinner(board1.board) == ' ' && i == 8){
         cout << "The game was a draw!" << endl; 
     }
     }
+//This is just to prevent the executable from closing after the program stops running 
+system("pause"); 
 };
